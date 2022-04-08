@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Moto Taxi</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="titlo_cadastro">Cadastrar uma conta</string>
+    <string name="titlo_login">Acessar minha conta</string>
+    <string name="title_activity_passageiro">PassageiroActivity</string>
+    <string name="title_activity_corrida">CorridaActivity</string>
+
+</resources>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo_degrade"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activity.CadastroActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/logomototaxi" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="331dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bd_edit_text"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="40dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editCadastroNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome "
+            android:inputType="text"
+            tools:ignore="TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bd_edit_text"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="136dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editCadastroEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            tools:ignore="TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="232dp"
+        app:hintEnabled="false"
+        android:background="@drawable/bd_edit_text"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorPrimary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editCadastroSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="232dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Passageiro"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="284dp"
+            tools:layout_editor_absoluteY="328dp" />
+
+        <Switch
+            android:id="@+id/switchTipoUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:shadowColor="#03A9F4"
+            android:textColor="#03A9F4"
+            android:textColorHighlight="#03A9F4"
+            android:textColorHint="#03A9F4"
+            android:textColorLink="#03A9F4"
+            android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:layout_editor_absoluteX="189dp"
+            tools:layout_editor_absoluteY="328dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="Motorista"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="328dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="331dp"
+        android:layout_height="48dp"
+        android:background="@drawable/fundo_botao"
+        android:onClick="validarCadastroUsuario"
+        android:text="Cadastrar"
+        android:textColor="@android:color/white"
+        tools:ignore="TextContrastCheck"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="395dp" />
+
+</LinearLayout>

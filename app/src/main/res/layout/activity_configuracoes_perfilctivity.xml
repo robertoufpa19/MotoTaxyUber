@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ConfiguracoesPerfilctivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Escolha uma foto"
+            android:textColor="@color/colorPrimary" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imagePerfilUsuarioConfig"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/perfil" />
+
+        <EditText
+            android:id="@+id/nomeUsuarioConfig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_amarelo_edit_text"
+            android:ems="10"
+            android:hint="Nome"
+            android:inputType="text"
+            android:padding="16dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHighlight="#151515"
+            android:textColorHint="@color/btnCadastrar"
+            android:textColorLink="#090909" />
+
+        <EditText
+            android:id="@+id/cidadeUsuarioConfig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/bg_amarelo_edit_text"
+            android:ems="10"
+            android:hint="Cidade"
+            android:inputType="text"
+            android:padding="16dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHighlight="#020202"
+            android:textColorHint="@color/btnCadastrar"
+            android:textColorLink="#040404" />
+
+        <EditText
+            android:id="@+id/bairroUsuarioConfig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/bg_amarelo_edit_text"
+            android:ems="10"
+            android:hint="Bairro"
+            android:inputType="text"
+            android:padding="16dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHighlight="#020202"
+            android:textColorHint="@color/btnCadastrar"
+            android:textColorLink="#040404" />
+
+        <EditText
+            android:id="@+id/ruaUsuarioConfig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/bg_amarelo_edit_text"
+            android:ems="10"
+            android:hint="Rua"
+            android:inputType="text"
+            android:padding="16dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHighlight="#020202"
+            android:textColorHint="@color/btnCadastrar"
+            android:textColorLink="#040404" />
+
+        <EditText
+            android:id="@+id/numeroCasaUsuarioConfig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/bg_amarelo_edit_text"
+            android:ems="10"
+            android:hint="Numero Casa"
+            android:inputType="numberDecimal"
+            android:padding="16dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHighlight="#020202"
+            android:textColorHint="@color/btnCadastrar"
+            android:textColorLink="#040404" />
+
+        <Button
+            android:id="@+id/buttonSalvarUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/fundo_botao"
+            android:onClick="validarDadosUsuario"
+            android:padding="16dp"
+            android:text="Salvar"
+            android:textColor="@color/colorPrimary"
+            tools:ignore="TextContrastCheck" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
