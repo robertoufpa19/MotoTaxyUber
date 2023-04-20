@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 33
     buildToolsVersion "30.0.3"
     defaultConfig {
         applicationId "robertorodrigues.curso.uber.com"
         minSdkVersion 16
-        targetSdkVersion 30
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -17,6 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    namespace 'robertorodrigues.curso.uber.com'
 }
 
 dependencies {
