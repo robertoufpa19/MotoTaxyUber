@@ -123,4 +123,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /// finalizar ao clicar no botão voltar
+    @Override
+    public void finish() {
+        finishAffinity();
+        super.finish();
+    }
+
 }
