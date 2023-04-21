@@ -14,7 +14,7 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginBottom="20dp"
-        app:srcCompat="@drawable/logomototaxi" />
+        app:srcCompat="@drawable/usuario" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
@@ -137,7 +137,7 @@
         android:background="@drawable/fundo_botao"
         android:onClick="validarCadastroUsuario"
         android:text="Cadastrar"
-        android:textColor="@android:color/white"
+        android:textColor="#9D2FC5"
         tools:ignore="TextContrastCheck"
         tools:layout_editor_absoluteX="40dp"
         tools:layout_editor_absoluteY="395dp" />

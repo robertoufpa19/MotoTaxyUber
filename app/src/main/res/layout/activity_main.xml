@@ -10,19 +10,30 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="0dp"
-        android:layout_height="300dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="180dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="180dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:layout_width="187dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="224dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.205"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logomototaxi" />
+        app:srcCompat="@drawable/carro" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="270dp"
+        android:layout_height="183dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.886"
+        app:srcCompat="@drawable/destino" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -48,7 +59,7 @@
             android:onClick="abrirTelaLogin"
             android:paddingRight="4dp"
             android:text="Entrar"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="#9D2FC5"
             tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck,TextContrastCheck,TouchTargetSizeCheck" />
 
         <Button
@@ -59,7 +70,7 @@
             android:background="@drawable/fundo_botao"
             android:onClick="abrirTelaCadastro"
             android:text="Cadastrar"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="#9D2FC5"
             tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
     </LinearLayout>
 
