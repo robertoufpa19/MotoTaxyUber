@@ -54,6 +54,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (task.isSuccessful()){
                     // verificar o tipo de usuario(passageiro ou motorista)
                     UsuarioFirebase.redirecionaUsuarioLogado(LoginActivity.this);
+                    finish();
 
                 }else{
                     String excecao = "";

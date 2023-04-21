@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -182,8 +183,42 @@ public class RequisicoesActivity extends AppCompatActivity {
 
         switch (item.getItemId()){
             case R.id.menuSair :
-                autenticacao.signOut();
-                finish();
+
+
+
+                android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(RequisicoesActivity.this);
+                builder.setTitle("Sair");
+                builder.setMessage("Tem certeza que deseja sair?");
+
+                builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        try {
+                            autenticacao.signOut();
+                            finish();
+
+                        }catch (Exception  e){
+                            e.printStackTrace();
+                        }
+
+                        finish();
+                        abrirHome();
+                    }
+                });
+                builder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+
+                    }
+                });
+
+                android.app.AlertDialog dialog = builder.create();
+                dialog.show();
+
+                // autenticacao.signOut();
+                // finish();
                 break;
 
             case R.id.menuConfiguracoes :
@@ -302,6 +337,10 @@ public class RequisicoesActivity extends AppCompatActivity {
 
     private void abrirConfiguracoes(){
         startActivity(new Intent(RequisicoesActivity.this, ConfiguracoesPerfilctivity.class));
+    }
+
+    private void abrirHome(){
+        startActivity(new Intent(RequisicoesActivity.this, MainActivity.class));
     }
 
     private void exibirMensagem(String texto){

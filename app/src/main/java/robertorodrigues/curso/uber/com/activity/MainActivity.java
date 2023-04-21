@@ -15,9 +15,11 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import robertorodrigues.curso.uber.com.R;
 import robertorodrigues.curso.uber.com.config.ConfiguracaoFirebase;
@@ -27,6 +29,7 @@ import robertorodrigues.curso.uber.com.helper.UsuarioFirebase;
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth autenticacao;
+    private LinearLayout linearLayout;
     private String[] permissoes = new String[]{
             Manifest.permission.ACCESS_FINE_LOCATION
     };
@@ -37,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         getSupportActionBar().hide(); // ocultar toolbar
-
+        linearLayout = findViewById(R.id.linearLayout);
+        linearLayout.setVisibility(View.GONE);
         // validar as permissoes
         Permissoes.validarPermissoes(permissoes, this,1);
         verificarGps();
@@ -62,7 +66,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        UsuarioFirebase.redirecionaUsuarioLogado(MainActivity.this);
+
+        FirebaseUser usuarioLogado = UsuarioFirebase.getUsuarioAtual();
+
+        if(usuarioLogado != null){
+            UsuarioFirebase.redirecionaUsuarioLogado(MainActivity.this);
+        }else{
+            linearLayout.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
