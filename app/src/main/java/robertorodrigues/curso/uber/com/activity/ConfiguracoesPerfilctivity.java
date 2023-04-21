@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -34,6 +35,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import dmax.dialog.SpotsDialog;
 import robertorodrigues.curso.uber.com.R;
 import robertorodrigues.curso.uber.com.config.ConfiguracaoFirebase;
+import robertorodrigues.curso.uber.com.helper.Permissoes;
 import robertorodrigues.curso.uber.com.helper.UsuarioFirebase;
 import robertorodrigues.curso.uber.com.model.Usuario;
 
@@ -54,6 +56,10 @@ public class ConfiguracoesPerfilctivity extends AppCompatActivity {
 
     private AlertDialog dialog;
 
+    private String[] permissoesNecessarias = new String[]{
+            Manifest.permission.READ_EXTERNAL_STORAGE
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,13 +68,15 @@ public class ConfiguracoesPerfilctivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Configurações");
 
+        // validar permissões
+        Permissoes.validarPermissoes(permissoesNecessarias, ConfiguracoesPerfilctivity.this, 1);
+
         //configurações iniciais
-         inicializarComponentes();
+        inicializarComponentes();
         usuarioLogado = UsuarioFirebase.getDadosUsuarioLogado();
         idUsuarioLogado = UsuarioFirebase.getIdentificadorUsuario();
         firebaseRef = ConfiguracaoFirebase.getFirebaseDatabase();
         storageReference = ConfiguracaoFirebase.getFirebaseStorage();
-
 
         // selecionar foto de perfil
         imagePerfilUsuario.setOnClickListener(new View.OnClickListener() {
