@@ -28,7 +28,6 @@ import robertorodrigues.curso.uber.com.helper.UsuarioFirebase;
 
 public class MainActivity extends AppCompatActivity {
 
-    private FirebaseAuth autenticacao;
     private LinearLayout linearLayout;
     private String[] permissoes = new String[]{
             Manifest.permission.ACCESS_FINE_LOCATION
