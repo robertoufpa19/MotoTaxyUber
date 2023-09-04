@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Moto Taxi</string>
+    <string name="app_name">ROR rotas</string>
     <string name="title_activity_maps">Map</string>
     <string name="titlo_cadastro">Cadastrar uma conta</string>
     <string name="titlo_login">Acessar minha conta</string>

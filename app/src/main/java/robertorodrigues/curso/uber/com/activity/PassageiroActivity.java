@@ -637,6 +637,7 @@ public class PassageiroActivity extends AppCompatActivity
         toolbar.setTitle("Iniciar uma viagem");
         setSupportActionBar(toolbar);
 
+
         //Inicializar componentes
         editDestino = findViewById(R.id.editDestino);
         linearLayoutDestino = findViewById(R.id.linearLayoutDestino);

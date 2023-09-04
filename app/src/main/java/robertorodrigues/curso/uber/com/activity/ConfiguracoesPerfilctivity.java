@@ -67,6 +67,10 @@ public class ConfiguracoesPerfilctivity extends AppCompatActivity {
         setContentView(R.layout.activity_configuracoes_perfilctivity);
 
         getSupportActionBar().setTitle("Configurações");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // configura botao voltar
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_voltar_24); // conficurar um botao personalizado
+
+
 
         // validar permissões
         Permissoes.validarPermissoes(permissoesNecessarias, ConfiguracoesPerfilctivity.this, 1);
@@ -324,6 +328,11 @@ public class ConfiguracoesPerfilctivity extends AppCompatActivity {
     private void exibirMensagem(String texto){
         Toast.makeText(this, texto, Toast.LENGTH_SHORT).show();
     }
-
+    // ao clicar no icone "<" a activiy será finalizada
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return false;
+    }
 
 }

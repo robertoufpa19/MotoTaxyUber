@@ -130,7 +130,7 @@
         android:background="@drawable/fundo_botao"
         android:onClick="validarCadastroUsuario"
         android:text="Cadastrar"
-        android:textColor="#9D2FC5"
+        android:textColor="#2196F3"
         tools:ignore="TextContrastCheck"
         tools:layout_editor_absoluteX="40dp"
         tools:layout_editor_absoluteY="395dp" />
